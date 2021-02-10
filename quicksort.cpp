@@ -1,4 +1,6 @@
 //adam
+//quicksort 
+//ave and best time complexity 0（nlogn）, worst 0(n^2)
 #include <stdio.h>
 void swap(int* a, int* b) 
 { 

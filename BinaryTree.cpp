@@ -30,6 +30,14 @@ void printTree(node* root, int space)
     std::cout << root->key_value << "\n";
     printTree(root->left, space);
 }//printTree
+int maxDeath(node* node) {
+    if (node == NULL) {
+        return -1;
+    }
+    int left = maxDeath(node->left);
+    int right = maxDeath(node->right);
+    return std::max(left, right) + 1;
+}
 int main()
 {
     node* root = new node(13);
@@ -63,4 +71,5 @@ int main()
     */
     printTree(root, 0);
     return 0;
+    std::cout << maxDeath(root);
 }//main
